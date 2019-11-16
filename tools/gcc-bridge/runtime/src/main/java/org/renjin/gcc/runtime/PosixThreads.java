@@ -48,7 +48,7 @@ public class PosixThreads {
     @Override
     public synchronized void start() {
       try {
-        result = (Ptr) startRoutine.invoke(arg);
+//        result = (Ptr) startRoutine.invoke(arg);
       } catch (Throwable throwable) {
         throwable.printStackTrace();
       }
@@ -137,7 +137,7 @@ public class PosixThreads {
     synchronized (onceControl.getArray()) {
       if(onceControl.getInt(0) == 0) {
         onceControl.setInt(0, 1);
-        initRoutine.invoke();
+//        initRoutine.invoke();
       }
     }
     return SUCCESS;
